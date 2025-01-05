@@ -23,7 +23,7 @@ export default function Accounting_edit() {
         if (id) {
             const fetch_api = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:8000/api/cashier_two/${id}`);
+                    const response = await axios.get(`https://dashboard-yfuz.onrender.com/api/cashier_two/${id}`);
                     if (response.status === 200) {
                         const data = response.data;
                         setId(data.Id || '');
@@ -54,9 +54,9 @@ export default function Accounting_edit() {
             const AddPost = {Id, Ag, Name, Phone, condition, selection, reason};
             let res;
             if (id) {
-                res = await axios.patch(`http://localhost:8000/api/cashier_two/${id}`, AddPost);
+                res = await axios.patch(`https://dashboard-yfuz.onrender.com/api/cashier_two/${id}`, AddPost);
             } else {
-                res = await axios.post(`http://localhost:8000/api/cashier_two`, AddPost);
+                res = await axios.post(`https://dashboard-yfuz.onrender.com/api/cashier_two`, AddPost);
                 if (res.status === 200) {
                     navigate('/LocaOne');
                 }

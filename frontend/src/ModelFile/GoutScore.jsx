@@ -9,7 +9,7 @@ export default function User() {
   useEffect(() => {
       const fetchGOutScroe1 = async () => {
         try {
-              const fetchResponse = await fetch('http://localhost:8000/api/score');
+              const fetchResponse = await fetch('https://dashboard-yfuz.onrender.com/api/score');
             if (!fetchResponse.ok) {
               throw new Error('Not fetchResponse your API');
             };

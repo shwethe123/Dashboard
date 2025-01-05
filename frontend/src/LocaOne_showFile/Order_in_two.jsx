@@ -7,7 +7,7 @@ const [ order_in_twos, setOrder_in_two ] = useState([]);
 
 useEffect(() => {
   const fetchOrder_in_two = async () => {
-    const response = await fetch('http://localhost:8000/api/order_in_two');
+    const response = await fetch('https://dashboard-yfuz.onrender.com/api/order_in_two');
     const data = await response.json();
     setOrder_in_two(data);
   };

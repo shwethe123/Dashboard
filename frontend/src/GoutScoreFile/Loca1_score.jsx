@@ -5,7 +5,7 @@ export default function Loca1_score() {
 
     useEffect (() => {
         const fetchGLoca1 = async () => {
-            const response = await fetch('http://localhost:8000/api/score');
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/score');
             if (!response.ok) {
                 throw new error('Network response was not ok');
             };

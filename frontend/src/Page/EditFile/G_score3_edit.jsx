@@ -17,7 +17,7 @@ export default function G_score3_edit() {
         const fetchGoutScore = async () => {
             if (id) {
                 try {
-                    const response = await axios.get(`http://localhost:8000/api/score3/${id}`);
+                    const response = await axios.get(`https://dashboard-yfuz.onrender.com/api/score3/${id}`);
                     if (response.status === 201) {
                         setAg(response.data.ag);
                         setRow(response.data.row);
@@ -46,7 +46,7 @@ export default function G_score3_edit() {
                     loca,
                     score
                 }
-                const response = await axios.patch(`http://localhost:8000/api/score3/${id}`, UpdatePosts);
+                const response = await axios.patch(`https://dashboard-yfuz.onrender.com/api/score3/${id}`, UpdatePosts);
                 if (response.status === 200) {
                     setError('Score updated successfully.');
                     navigate('/Gouttable3');

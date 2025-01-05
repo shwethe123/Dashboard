@@ -25,7 +25,7 @@ export default function GoutAllTable() {
     useEffect(() => {
         try {
             const fetchData = async () => {
-                const response = await fetch('http://localhost:8000/api/allScore');
+                const response = await fetch('https://dashboard-yfuz.onrender.com/api/allScore');
                 if (!response.ok) {
                     throw new Error('Something went wrong!');
                 }else{

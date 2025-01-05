@@ -16,7 +16,7 @@ export default function GoutAllCreate({createClose}) {
         if (id) {
             try {
                 const fetchData = async () => {
-                    const response = await axios.get(`http://localhost:8000/api/allScore/${id}`);
+                    const response = await axios.get(`https://dashboard-yfuz.onrender.com/api/allScore/${id}`);
                     if (response.status === 200) {
                         const data = response.data;
                         setAg(data.ag || '');
@@ -41,12 +41,12 @@ export default function GoutAllCreate({createClose}) {
                 let res;
                 const newPost = {ag, name, location, score};
                 if (id) {
-                    res = await axios.patch(`http://localhost:8000/api/allScore/${id}`, newPost);
+                    res = await axios.patch(`https://dashboard-yfuz.onrender.com/api/allScore/${id}`, newPost);
                     if (res.status === 200) {
                         navigate('/GoutAllTable')
                     };
                 } else {
-                    res = await axios.post('http://localhost:8000/api/allScore', newPost);
+                    res = await axios.post('https://dashboard-yfuz.onrender.com/api/allScore', newPost);
                     if (res.status === 201) {
                         createClose();
                     };

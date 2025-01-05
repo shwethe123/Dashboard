@@ -26,7 +26,7 @@ export default function LongmaoWifi() {
       setError(null);
 
       try {
-        const wifiData = await fetch('http://localhost:8000/api/wifi');
+        const wifiData = await fetch('https://dashboard-yfuz.onrender.com/api/wifi');
 
         if (!wifiData.ok) {
           throw new Error('Failed to fetch data');

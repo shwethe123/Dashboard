@@ -8,7 +8,7 @@ export default function Sale_out() {
     useEffect(() => {
         const fetchSaleOut = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/saleOut_three');
+                const response = await fetch('https://dashboard-yfuz.onrender.com/api/saleOut_three');
                 if (!response.ok) {
                     throw new Error('not response api');
                 };

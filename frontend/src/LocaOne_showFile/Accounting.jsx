@@ -7,7 +7,7 @@ export default function Accounting() {
 
     useEffect(() => {
         const AccountingFecth = async () => {
-            const respons = await fetch('http://localhost:8000/api/accounting');
+            const respons = await fetch('https://dashboard-yfuz.onrender.com/api/accounting');
             const data = await respons.json();
             setAccounting(data);
         };

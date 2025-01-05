@@ -23,7 +23,7 @@ export default function Sale_in3_edit() {
         if (id) {
             const fetch_api = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:8000/api/salesIn_three/${id}`);
+                    const response = await axios.get(`https://dashboard-yfuz.onrender.com/api/salesIn_three/${id}`);
                     if (response.status === 200) {
                         const data = response.data;
                         setId(data.Id || '');
@@ -54,9 +54,9 @@ export default function Sale_in3_edit() {
             const addPost = {Id, Ag, Name, Phone, condition, selection, reason};
             let res;
             if (id) {
-                res = await axios.patch(`http://localhost:8000/api/salesIn_three/${id}`, addPost);
+                res = await axios.patch(`https://dashboard-yfuz.onrender.com/api/salesIn_three/${id}`, addPost);
             } else {
-                res = await axios.post(`http://localhost:8000/api/salesIn_three`, addPost);
+                res = await axios.post(`https://dashboard-yfuz.onrender.com/api/salesIn_three`, addPost);
                 if (res.status === 200) {
                     navigate('/LocaOne');
                 }

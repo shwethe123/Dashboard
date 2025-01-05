@@ -17,7 +17,7 @@ export default function G_score2_edit() {
             const fetchG_score2 = async () => {
                 if (id) {
                     try {
-                    const response = await axios.get(`http://localhost:8000/api/score2/${id}`);
+                    const response = await axios.get(`https://dashboard-yfuz.onrender.com/api/score2/${id}`);
                     // console.log(response);
                     if (response.status === 201) {
                         setAg(response.data.ag);
@@ -47,7 +47,7 @@ export default function G_score2_edit() {
                 score
             };
             try {
-                const response = await axios.patch(`http://localhost:8000/api/score2/${id}`, UpdatePost);
+                const response = await axios.patch(`https://dashboard-yfuz.onrender.com/api/score2/${id}`, UpdatePost);
                 if (response.status === 200) {
                     setError('Score updated successfully');
                     navigate('/GoutTable2');

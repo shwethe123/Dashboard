@@ -17,13 +17,13 @@ export default function Loca2AllTable() {
         try {
             const fetchIndex = async () => {
                 const [res1, res2, res3, res4, res5, res6, res7] = await Promise.all([
-                    fetch('http://localhost:8000/api/gout_two'),
-                    fetch('http://localhost:8000/api/salesIn_two'),
-                    fetch('http://localhost:8000/api/saleOut_two'),
-                    fetch('http://localhost:8000/api/carOrder_two'),
-                    fetch('http://localhost:8000/api/orderIn_two'),
-                    fetch('http://localhost:8000/api/cashier_two'),
-                    fetch('http://localhost:8000/api/cargo_two'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/gout_two'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/salesIn_two'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/saleOut_two'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/carOrder_two'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/orderIn_two'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/cashier_two'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/cargo_two'),
                 ])
                 if (!res1.status === 200 ||!res2.status === 200 ||!res3.status === 200 ||
                     !res4.status === 200 ||!res5.status === 200 ||!res6.status === 200 ||

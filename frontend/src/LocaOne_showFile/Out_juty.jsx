@@ -7,7 +7,7 @@ export default function Out_juty() {
 
     useEffect(() => {
         const fetchOutJuty = async () => {
-            const response = await fetch('http://localhost:8000/api/outjuty');
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/outjuty');
             const data = await response.json();
             setOutJuty(data);
         };

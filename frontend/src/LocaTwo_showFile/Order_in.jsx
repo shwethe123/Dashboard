@@ -6,7 +6,7 @@ export default function Order_in() {
     
     useEffect(() => {
         const fetchOrderIn = async () => {
-            const response = await fetch('http://localhost:8000/api/orderIn_two');
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/orderIn_two');
             const data = await response.json();
             setOrderIn(data);
         };

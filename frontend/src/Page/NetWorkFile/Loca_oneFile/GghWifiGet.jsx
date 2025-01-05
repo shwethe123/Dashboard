@@ -27,7 +27,7 @@ export default function WifiGet() {
       setError(null);
 
       try {
-        const response = await fetch('http://localhost:8000/api/wifi');
+        const response = await fetch('https://dashboard-yfuz.onrender.com/api/wifi');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

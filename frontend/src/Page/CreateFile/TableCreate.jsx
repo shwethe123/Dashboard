@@ -20,7 +20,7 @@ export default function UserCreate() {
     if (id) {
       const fetchSale_in = async () => {
         try {
-          const res = await axios.get('http://localhost:8000/api/sales_in/'+id);
+          const res = await axios.get('https://dashboard-yfuz.onrender.com/api/sales_in/'+id);
           if (res.status === 200) {
             const data = res.data;
             console.log(data)
@@ -56,9 +56,9 @@ export default function UserCreate() {
       };
       let res;
       if (id) {
-        res = await axios.patch('http://localhost:8000/api/sales_in/' + id, addPost);
+        res = await axios.patch('https://dashboard-yfuz.onrender.com/api/sales_in/' + id, addPost);
       } else {
-        res = await axios.post('http://localhost:8000/api/sales_in', addPost);
+        res = await axios.post('https://dashboard-yfuz.onrender.com/api/sales_in', addPost);
       }
       if (res.status == 200) {
         navigate('/LocaOne');

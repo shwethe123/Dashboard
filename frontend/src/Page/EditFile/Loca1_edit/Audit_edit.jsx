@@ -23,7 +23,7 @@ export default function Audit_edit() {
         try {
             if (id) {
                 const fetch_api = async () => {
-                    const res = await axios.get(`http://localhost:8000/api/audit/${id}`);
+                    const res = await axios.get(`https://dashboard-yfuz.onrender.com/api/audit/${id}`);
                     if (res.status === 200) {
                         const data = res.data;
                         setId(data.Id);
@@ -53,9 +53,9 @@ export default function Audit_edit() {
             const addPost = { Id, Ag, Name, Phone, condition, selection, reason };
                 let res;
             if (id) {
-                res = await axios.patch(`http://localhost:8000/api/audit/${id}`, addPost);
+                res = await axios.patch(`https://dashboard-yfuz.onrender.com/api/audit/${id}`, addPost);
             } else {
-                res = await axios.post(`http://localhost:8000/api/audit`, addPost);
+                res = await axios.post(`https://dashboard-yfuz.onrender.com/api/audit`, addPost);
                 if (res.status === 200) {
                     navigate('/LocaOne');
                 }

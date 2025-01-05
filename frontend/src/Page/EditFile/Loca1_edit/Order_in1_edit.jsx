@@ -23,7 +23,7 @@ export default function Order_in1_edit() {
         if (id) {
             const fetch_api = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:8000/api/order_in/${id}`);
+                    const response = await axios.get(`https://dashboard-yfuz.onrender.com/api/order_in/${id}`);
                     if (response.status === 200) {
                         const data = response.data;
                         setId(data.Id || '');
@@ -54,9 +54,9 @@ export default function Order_in1_edit() {
             const addPost = {Id, Ag, Name, Phone, condition, selection, reason};
             let res;
             if (id) {
-                res = await axios.patch(`http://localhost:8000/api/order_in/${id}`, addPost);
+                res = await axios.patch(`https://dashboard-yfuz.onrender.com/api/order_in/${id}`, addPost);
             } else {
-                res = await axios.post('http://localhost:8000/api/order_in', addPost);
+                res = await axios.post('https://dashboard-yfuz.onrender.com/api/order_in', addPost);
                 navigate('/LocaOne');
             };
         } catch (error) {

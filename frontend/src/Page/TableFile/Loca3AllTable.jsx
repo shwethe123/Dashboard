@@ -16,11 +16,11 @@ export default function Loca3AllTable() {
             const fetchForIndex = async () => {
                 const [indexRes1, indexRes2, indexRes3,indexRes4,indexRex5] = await
                 Promise.all([
-                    fetch('http://localhost:8000/api/gout_three'),
-                    fetch('http://localhost:8000/api/salesIn_three'),
-                    fetch('http://localhost:8000/api/saleOut_three'),
-                    fetch('http://localhost:8000/api/carOrder_three'),
-                    fetch('http://localhost:8000/api/cashier_three'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/gout_three'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/salesIn_three'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/saleOut_three'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/carOrder_three'),
+                    fetch('https://dashboard-yfuz.onrender.com/api/cashier_three'),
                 ]);
                 if (!indexRes1.status === 200 ||!indexRes2.status === 200||!indexRes3.status === 200
                     || !indexRes4.status ==200 || !indexRex5.status === 200 ) {

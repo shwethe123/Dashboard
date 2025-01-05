@@ -32,9 +32,9 @@ const LineChart = () => {
     const fetchGLoca1 = async () => {
       try {
         const [Loca1_response, Loca2_response, Loca3_response] = await Promise.all([
-          fetch('http://localhost:8000/api/score'),
-          fetch('http://localhost:8000/api/score2'),
-          fetch('http://localhost:8000/api/score3')
+          fetch('https://dashboard-yfuz.onrender.com/api/score'),
+          fetch('https://dashboard-yfuz.onrender.com/api/score2'),
+          fetch('https://dashboard-yfuz.onrender.com/api/score3')
         ]);
         if (!Loca1_response.ok || !Loca2_response.ok || !Loca3_response) {
           throw new Error('Network response is not ok');

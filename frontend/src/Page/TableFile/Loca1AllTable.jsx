@@ -8,16 +8,16 @@ export default function LocaAllTable() {
     const fetchLocaIndexes = async () => {
       try {
         const responses = await Promise.all([
-          fetch('http://localhost:8000/api/dashboard'),
-          fetch('http://localhost:8000/api/sales_in'),
-          fetch('http://localhost:8000/api/sale_out'),
-          fetch('http://localhost:8000/api/car_order'),
-          fetch('http://localhost:8000/api/dashboard'),
-          fetch('http://localhost:8000/api/order_in_two'),
-          fetch('http://localhost:8000/api/accounting'),
-          fetch('http://localhost:8000/api/audit'),
-          fetch('http://localhost:8000/api/outjuty'),
-          fetch('http://localhost:8000/api/chack'),
+          fetch('https://dashboard-yfuz.onrender.com/api/dashboard'),
+          fetch('https://dashboard-yfuz.onrender.com/api/sales_in'),
+          fetch('https://dashboard-yfuz.onrender.com/api/sale_out'),
+          fetch('https://dashboard-yfuz.onrender.com/api/car_order'),
+          fetch('https://dashboard-yfuz.onrender.com/api/dashboard'),
+          fetch('https://dashboard-yfuz.onrender.com/api/order_in_two'),
+          fetch('https://dashboard-yfuz.onrender.com/api/accounting'),
+          fetch('https://dashboard-yfuz.onrender.com/api/audit'),
+          fetch('https://dashboard-yfuz.onrender.com/api/outjuty'),
+          fetch('https://dashboard-yfuz.onrender.com/api/chack'),
         ]);
 
         if (!responses.every((res) => res.status === 200)) {

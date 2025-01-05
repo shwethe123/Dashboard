@@ -6,7 +6,7 @@ export default function Chack() {
 
   useEffect(() => {
     const fetchChack = async () => {
-      const response = await fetch('http://localhost:8000/api/chack');
+      const response = await fetch('https://dashboard-yfuz.onrender.com/api/chack');
       const data = await response.json();
       setChack(data);
       // console.log(data);

@@ -6,7 +6,7 @@ export default function Accounting() {
 
     useEffect(()=> {
         const fetchAccount_data = async () => {
-            const response = await fetch('http://localhost:8000/api/cashier_two');
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/cashier_two');
             const data = await response.json();
             setAccount(data);
         };

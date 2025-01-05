@@ -5,7 +5,7 @@ export default function Car_go() {
     
     useEffect(() => {
         const fetchCarGo = async () => {
-            const response = await fetch('http://localhost:8000/api/cargo_three');
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/cargo_three');
             const data = await response.json();
             setCarGo(data);
         };

@@ -6,7 +6,7 @@ export default function Car_order() {
     
     useEffect(() => {
         const fetchCarOrder = async () => {
-            const response = await fetch('http://localhost:8000/api/carOrder_two');
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/carOrder_two');
             const data = await response.json();
             setCarOrder(data);
         };

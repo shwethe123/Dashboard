@@ -6,7 +6,7 @@ export default function Sale_in() {
 
   useEffect(() => {
     const fetchSaleInData = async () => {
-      const response = await fetch('http://localhost:8000/api/sales_in');
+      const response = await fetch('https://dashboard-yfuz.onrender.com/api/sales_in');
       const data = await response.json();
       setSaleInData(data);
     };

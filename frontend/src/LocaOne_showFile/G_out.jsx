@@ -9,7 +9,7 @@ export default function G_out() {
   useEffect(() => {
     const fetchGOutData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/dashboard');{/* data fetch */}
+        const response = await fetch('https://dashboard-yfuz.onrender.com/api/dashboard');{/* data fetch */}
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

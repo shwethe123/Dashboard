@@ -17,7 +17,7 @@ export default function G_score_edit() {
     const fetchG_score = async () => {
       if (id) {
         try {
-          const response1 = await axios.get(`http://localhost:8000/api/score/${id}`);
+          const response1 = await axios.get(`https://dashboard-yfuz.onrender.com/api/score/${id}`);
           if (response1.status === 200) {
             setAg(response1.data.ag);
             setRow(response1.data.row);
@@ -41,7 +41,7 @@ export default function G_score_edit() {
     if (password === '12345') {
       const UpdatePost = { ag, row, loca, score };
       try {
-        const response = await axios.patch(`http://localhost:8000/api/score/${id}`, UpdatePost);
+        const response = await axios.patch(`https://dashboard-yfuz.onrender.com/api/score/${id}`, UpdatePost);
         if (response.status === 200) {
           setError('Score updated successfully.');
           navigate('/GoutTable')

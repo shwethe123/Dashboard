@@ -8,7 +8,7 @@ export default function Gout2Table() {
 
     useEffect(() => {
         const fetchData2 = async () => {
-            const response = await fetch('http://localhost:8000/api/score2');
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/score2');
             if (!response.status === 200) {
                 throw new Error('Not fetchResponse your API')
             };

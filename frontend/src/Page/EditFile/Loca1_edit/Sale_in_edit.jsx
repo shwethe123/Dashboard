@@ -23,7 +23,7 @@ export default function Sale_out_edit() {
         if (id) {
             const fetch_api = async () => {
                 try {
-                    const responses = await axios.get(`http://localhost:8000/api/sales_in/${id}`);
+                    const responses = await axios.get(`https://dashboard-yfuz.onrender.com/api/sales_in/${id}`);
                     if (responses.status === 200) {
                         const data = responses.data;
                         setId(data.Id || '');
@@ -65,9 +65,9 @@ export default function Sale_out_edit() {
                 };
                 let res;
                 if (id) {
-                    res = await axios.patch(`http://localhost:8000/api/sales_in/${id}`, AddPost);
+                    res = await axios.patch(`https://dashboard-yfuz.onrender.com/api/sales_in/${id}`, AddPost);
                 }else{
-                    res = await axios.post(`http://localhost:8000/api/sales_in`, AddPost);
+                    res = await axios.post(`https://dashboard-yfuz.onrender.com/api/sales_in`, AddPost);
                     if (res.status === 200) {
                         navigate('/LocaOne');
                     }

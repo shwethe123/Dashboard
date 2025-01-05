@@ -16,7 +16,7 @@ export default function Worker_edit() {
   useEffect(() => {
     const fetchWorker = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/worker/${id}`);
+        const response = await axios.get(`https://dashboard-yfuz.onrender.com/api/worker/${id}`);
         if (response.status === 200) {
           const data = response.data;
           setLoca(data.loca || '');
@@ -45,7 +45,7 @@ export default function Worker_edit() {
 
     const updatedWorker = { loca, hard_worker, car_flaw, d_w_h, h_red, h_blue };
     try {
-      const response = await axios.patch(`http://localhost:8000/api/worker/${id}`, updatedWorker);
+      const response = await axios.patch(`https://dashboard-yfuz.onrender.com/api/worker/${id}`, updatedWorker);
       if (response.status === 200) {
         alert('Worker updated successfully!');
         navigate('/')

@@ -7,7 +7,7 @@ export default function Gout3Table() {
 
     useEffect(() => {
         const fetchGourTable3 = async () => {
-            const response = await fetch('http://localhost:8000/api/score3');
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/score3');
             if (!response.status === 200 ) {
                 throw new Error('Not response your api')
             };

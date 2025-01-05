@@ -24,7 +24,7 @@ export default function Car_order2_edit() {
     if (id) {
       const fetch_api = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/api/carOrder_two/${id}`);
+          const response = await axios.get(`https://dashboard-yfuz.onrender.com/api/carOrder_two/${id}`);
           if (response.status === 200) {
             const data = response.data;
             setId(data.Id || '');
@@ -55,9 +55,9 @@ export default function Car_order2_edit() {
       const addPost = {Id, Ag, Name, Phone, condition, selection, reason}
       let res;
       if (id) {
-        res = await axios.patch(`http://localhost:8000/api/carOrder_two/${id}`, addPost);
+        res = await axios.patch(`https://dashboard-yfuz.onrender.com/api/carOrder_two/${id}`, addPost);
       } else {
-        res = await axios.post(`http://localhost:8000/api/carOrder_two`, addPost);
+        res = await axios.post(`https://dashboard-yfuz.onrender.com/api/carOrder_two`, addPost);
         if (res.status === 200) {
           navigate('/LocaOne');
         };

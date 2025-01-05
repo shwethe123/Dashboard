@@ -23,7 +23,7 @@ export default function Sale_out_edit() {
         if (id) {
             const fetch_api = async () => {
                 try {
-                    const responses = await axios.get(`http://localhost:8000/api/sale_out/${id}`);
+                    const responses = await axios.get(`https://dashboard-yfuz.onrender.com/api/sale_out/${id}`);
                     if (responses.status === 200) {
                         const data = responses.data;
                         setId(data.Id || '');
@@ -65,9 +65,9 @@ export default function Sale_out_edit() {
                 };
                 let res;
                 if (id) {
-                    res = await axios.patch(`http://localhost:8000/api/sale_out/${id}`, AddPost);
+                    res = await axios.patch(`https://dashboard-yfuz.onrender.com/api/sale_out/${id}`, AddPost);
                 }else{
-                    res = await axios.get(`http://localhost:8000/api/sale_out`, AddPost);
+                    res = await axios.get(`https://dashboard-yfuz.onrender.com/api/sale_out`, AddPost);
                     if (res.status === 200) {
                         navigate('/LocaOne');
                     }

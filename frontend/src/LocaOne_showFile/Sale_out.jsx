@@ -7,7 +7,7 @@ const [ sale_outs, setSale_outs ] = useState([]);
 
 useEffect(() => {
   const fetch_sale_out = async () => {
-    const response = await fetch('http://localhost:8000/api/sale_out');
+    const response = await fetch('https://dashboard-yfuz.onrender.com/api/sale_out');
     const data = await response.json();
     setSale_outs(data);
   };

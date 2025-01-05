@@ -21,7 +21,7 @@ export default function UserCreate() {
         Phone,
         Selection
       };
-      let response = await axios.post('http://localhost:8000/api/sales_in', addPost);
+      let response = await axios.post('https://dashboard-yfuz.onrender.com/api/sales_in', addPost);
       if (response.status == 200) {
         navigate('/LocaOne');
       }

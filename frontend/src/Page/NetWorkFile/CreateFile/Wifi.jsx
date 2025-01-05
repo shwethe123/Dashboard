@@ -10,7 +10,7 @@ export default function WifiSaleIncreCaculate() {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:8000/api/wifi', {
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/wifi', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

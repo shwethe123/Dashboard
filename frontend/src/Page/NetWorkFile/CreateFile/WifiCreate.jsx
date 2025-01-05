@@ -19,7 +19,7 @@ export default function WifiCreate() {
       if (id) {
         setLoading(true);
         try {
-          const res = await axios.get(`http://localhost:8000/api/wifi/${id}`);
+          const res = await axios.get(`https://dashboard-yfuz.onrender.com/api/wifi/${id}`);
           if (res.status === 200) {
             setLoca(res.data.loca);
             setName(res.data.name);
@@ -44,7 +44,7 @@ export default function WifiCreate() {
     setLoading(true);
     try {
       const updatedPost = { loca, Id, name, update_date: updateDate, remark };
-      const res = await axios.patch(`http://localhost:8000/api/wifi/${id}`, updatedPost);
+      const res = await axios.patch(`https://dashboard-yfuz.onrender.com/api/wifi/${id}`, updatedPost);
       if (res.status === 200) {
         navigate('/');
       }

@@ -7,7 +7,7 @@ export default function audit() {
 
     useEffect(() => {
         const auditFecth = async () => {
-            const respons = await fetch('http://localhost:8000/api/audit');
+            const respons = await fetch('https://dashboard-yfuz.onrender.com/api/audit');
             const data = await respons.json();
             setAudit(data);
         };

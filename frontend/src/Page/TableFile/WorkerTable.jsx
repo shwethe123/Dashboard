@@ -9,7 +9,7 @@ export default function Logout() {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/worker");
+        const response = await fetch("https://dashboard-yfuz.onrender.com/api/worker");
         if (!response.ok) {
           throw new Error("Failed to fetch data from API");
         }

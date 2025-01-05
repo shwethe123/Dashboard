@@ -6,7 +6,7 @@ export default function G_out() {
 
     useEffect(() => {
         const fetchGOut = async () => {
-            const response = await fetch('http://localhost:8000/api/gout_three');
+            const response = await fetch('https://dashboard-yfuz.onrender.com/api/gout_three');
             const data = await response.json();
             setGOut(data);
         };
