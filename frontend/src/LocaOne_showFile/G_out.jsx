@@ -31,7 +31,7 @@ export default function G_out() {
 
   return (
     <div>
-      <h3 className="text-base font-semibold p-2 bg-gray-900 text-white mb-2 cursor-pointer">အဝင်ပိုင်း</h3>
+      <h3 className="text-base font-semibold p-2 bg-gray-900 text-white mb-2 cursor-pointer">G-ထွက်</h3>
             {gOutData.length > 0 ? (
               gOutData.map((item, index) => (
                 <div key={item._id} className='flax'>
