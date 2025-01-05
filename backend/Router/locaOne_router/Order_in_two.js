@@ -1,7 +1,7 @@
 const express = require('express');
 const { body } = require('express-validator');
 const ErrorMessageHandal = require('../../Middleware/ErrorMessageHandal');
-const Order_in_two_controller_controller = require('../../Controller/locaOne_contro/order_in_two_controller');
+const Order_in_two_controller_controller = require('../../Controller/locaOne_contro/Order_in_two_controller');
 
 const Router = express();
 
